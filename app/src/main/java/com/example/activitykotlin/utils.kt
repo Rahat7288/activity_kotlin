@@ -5,5 +5,6 @@ class Constants {
         const val INTENT_MESSEGE_KEY = "Message"
         const val INTENT_MESSAGE2_KEY = "Message"
         const val INTENT_DATA_NUMBER = "NUMBER"
+        const val RESULT_Code = 121212
     }
 }
