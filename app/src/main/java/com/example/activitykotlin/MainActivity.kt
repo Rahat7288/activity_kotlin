@@ -18,12 +18,17 @@ class MainActivity : AppCompatActivity() {
 
         goToButton.setOnClickListener {
 //            this actually means go to second activity
-//            val intent = Intent(this@MainActivity, SecondActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
 
-            Intent(this@MainActivity, SecondActivity::class.java).also {
-                startActivity(it)
-            }
+
+            intent.putExtra(Constants.INTENT_MESSEGE_KEY,  "hello from first Activity")
+            intent.putExtra(Constants.INTENT_MESSAGE2_KEY, "How was your day!")
+            intent.putExtra(Constants.INTENT_DATA_NUMBER, 3.14)
+            startActivity(intent)
+
+//            Intent(this@MainActivity, SecondActivity::class.java).also {
+//                startActivity(it)
+//            }
         }
     }
 
